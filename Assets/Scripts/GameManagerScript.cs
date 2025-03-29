@@ -6,19 +6,15 @@ using UnityEngine.SceneManagement;
 public class GameManagerScript : MonoBehaviour
 {
 
-    public void PlayGame()
+    public static bool isGameOver;
+    public GameObject gameOverScreen;
+
+    private void Awake()
     {
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+        isGameOver = false;
     }
 
-    public void QuitGame()
-    {
-        Debug.Log("QUIT!");
-        Application.Quit();
-    }
-
-
-    public GameObject gameOverUI;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -28,11 +24,21 @@ public class GameManagerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(isGameOver)
+        {
+            gameOverScreen.SetActive(true);
+        }
     }
 
-    public void gameOver()
+    
+    public void restart()
     {
-        gameOverUI.SetActive(true);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void QuitGame()
+    {
+        Debug.Log("QUIT!");
+        Application.Quit();
     }
 }

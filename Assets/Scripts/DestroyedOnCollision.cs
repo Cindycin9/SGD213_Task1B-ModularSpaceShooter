@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-
+using UnityEngine.UI;
 
 public enum TagListType
 {
@@ -20,25 +20,25 @@ public class DestroyedOnCollision : MonoBehaviour
     private List<string> tags;
 
 
-
     void OnTriggerEnter2D(Collider2D other)
     {
         bool tagInList = tags.Contains(other.gameObject.tag);
 
         if (tagListType == TagListType.Blacklist && tagInList)
         {
-            ScoreScript.scoreValue += 10;
             // Destroy if it's a Blacklist and the tag IS in the Blacklist
             Destroy(gameObject);
+            Debug.Log("END SCREEN");
+            GameManagerScript.isGameOver = true;
 
         }
-                //Bullet will destroy anything and itself it collides with, besides the player.
-                else if (tagListType == TagListType.Whitelist 
-                && !tagInList)
+
+        //Bullet will destroy anything and itself it collides with, besides the player.
+        else if (tagListType == TagListType.Whitelist && !tagInList)
         {
-            ScoreScript.scoreValue += 10;
             // Destroy if it's a Whitelist and the tag is NOT in the Whitelist
             Destroy(gameObject);
+
         }
         else
         {

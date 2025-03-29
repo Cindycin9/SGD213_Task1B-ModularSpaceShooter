@@ -6,16 +6,13 @@ public class InputManager : MonoBehaviour
 {
     private PlayerMovementScript playerMovementScript;
     private ShootingScript shootingScript;
-    private ScoreScript scoreScript;
 
     // Start is called before the first frame update
     void Start()
     {
         playerMovementScript = GetComponent<PlayerMovementScript>();
         shootingScript = GetComponent<ShootingScript>();
-        ScoreScript = GetConponent<ScoreScript>();
     }
-
 
     void Update()
     {
@@ -37,7 +34,6 @@ public class InputManager : MonoBehaviour
                 Debug.Log("Attach the shooting script!");
             }
         }
-        if ()
 
     }
 }
