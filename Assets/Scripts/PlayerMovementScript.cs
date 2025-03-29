@@ -16,6 +16,12 @@ public class PlayerMovementScript : MonoBehaviour
     
     }
 
+    //HorizontalMovement using the Rigidbody to add force
+    public void HorizontalMovement(float HorizontalInput)
+    {
+        Vector2 ForceToAdd = Vector2.right * HorizontalInput * speed * Time.deltaTime;
+        OURRigidbody.AddForce(ForceToAdd);
+    }
 
     // If player collides with Enemy, isGameOver is true
     private void OnTriggerEnter2D(Collider2D collider)
@@ -24,13 +30,4 @@ public class PlayerMovementScript : MonoBehaviour
         Debug.Log("END SCREEN");
     }
 
-
-
-
-
-    public void HorizontalMovement(float HorizontalInput)
-    {
-        Vector2 ForceToAdd = Vector2.right * HorizontalInput * speed * Time.deltaTime;
-        OURRigidbody.AddForce(ForceToAdd);
-    }
 }

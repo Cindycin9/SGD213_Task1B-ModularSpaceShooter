@@ -14,14 +14,11 @@ public class GameManagerScript : MonoBehaviour
         isGameOver = false;
     }
 
-   
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(isGameOver)
@@ -30,16 +27,17 @@ public class GameManagerScript : MonoBehaviour
         }
     }
 
-    
+    // Restarts the level when the Restart Button is pressed
     public void restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Debug.Log("GameRestarted");
     }
 
+    // Quits the game when the Quit Button is pressed
     public void QuitGame()
     {
-        Debug.Log("QUIT!");
         Application.Quit();
+        Debug.Log("GameQuit");
     }
 }

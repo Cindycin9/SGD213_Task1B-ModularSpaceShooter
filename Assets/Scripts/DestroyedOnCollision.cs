@@ -9,6 +9,7 @@ public enum TagListType
     Whitelist
 }
 
+
 public class DestroyedOnCollision : MonoBehaviour
 {
 
@@ -28,7 +29,6 @@ public class DestroyedOnCollision : MonoBehaviour
         {
             // Destroy if it's a Blacklist and the tag IS in the Blacklist
             Destroy(gameObject);
-
         } 
 
         //Bullet will destroy anything and itself it collides with, besides the player.
