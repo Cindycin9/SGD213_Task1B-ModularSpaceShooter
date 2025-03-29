@@ -11,23 +11,22 @@ public class PlayerMovementScript : MonoBehaviour
 
     void Start() 
     {
-        //Calls GetComponent once, increasing the game speed.
+        //Calls GetComponent once, increasing the game speed
         OURRigidbody = GetComponent<Rigidbody2D>(); 
     
     }
 
-    /* void Update() 
-   
-    {
-        float HorizontalInput = Input.GetAxis("Horizontal");
 
-        if (HorizontalInput != 0.0f) 
-        {
-            Vector2 ForceToAdd=Vector2.right*HorizontalInput*HorizontalPlayerAcceleration*Time.deltaTime;
-            OURRigidbody.AddForce(ForceToAdd);
-            //print(HorizontalInput);
-        } 
-    } */
+    // If player collides with Enemy, isGameOver is true
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        GameManagerScript.isGameOver = true;
+        Debug.Log("END SCREEN");
+    }
+
+
+
+
 
     public void HorizontalMovement(float HorizontalInput)
     {

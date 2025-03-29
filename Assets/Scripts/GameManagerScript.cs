@@ -34,6 +34,7 @@ public class GameManagerScript : MonoBehaviour
     public void restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Debug.Log("GameRestarted");
     }
 
     public void QuitGame()

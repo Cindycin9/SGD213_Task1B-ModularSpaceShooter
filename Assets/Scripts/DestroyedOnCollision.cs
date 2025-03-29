@@ -28,10 +28,8 @@ public class DestroyedOnCollision : MonoBehaviour
         {
             // Destroy if it's a Blacklist and the tag IS in the Blacklist
             Destroy(gameObject);
-            Debug.Log("END SCREEN");
-            GameManagerScript.isGameOver = true;
 
-        }
+        } 
 
         //Bullet will destroy anything and itself it collides with, besides the player.
         else if (tagListType == TagListType.Whitelist && !tagInList)

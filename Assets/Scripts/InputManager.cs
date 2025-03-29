@@ -7,6 +7,7 @@ public class InputManager : MonoBehaviour
     private PlayerMovementScript playerMovementScript;
     private ShootingScript shootingScript;
 
+
     // Start is called before the first frame update
     void Start()
     {
