@@ -2,13 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ConstantSpeedController : MonoBehaviour
+public class InputManager : MonoBehaviour
 {
-    [SerializeField]
-    private Vector2 direction;
-
     private Movement movement;
-
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +15,8 @@ public class ConstantSpeedController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movement.Move(direction);
+        float input = Input.GetAxis("Horizontal");
+
+        movement.Move(Vector2.right * input);
     }
 }
