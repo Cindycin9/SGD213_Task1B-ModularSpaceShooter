@@ -3,9 +3,10 @@ using System.Collections;
 
 public class PlayerMovementScript : MonoBehaviour 
 {
-            [SerializeField]
+    [SerializeField]
 
-            private float HorizontalPlayerAcceleration = 5000f;
+    public float speed = 5000f;
+
             private Rigidbody2D OURRigidbody;
 
     void Start() 
@@ -15,7 +16,8 @@ public class PlayerMovementScript : MonoBehaviour
     
     }
 
-    void Update() 
+    /* void Update() 
+   
     {
         float HorizontalInput = Input.GetAxis("Horizontal");
 
@@ -25,5 +27,11 @@ public class PlayerMovementScript : MonoBehaviour
             OURRigidbody.AddForce(ForceToAdd);
             //print(HorizontalInput);
         } 
-    } 
+    } */
+
+    public void HorizontalMovement(float HorizontalInput)
+    {
+        Vector2 ForceToAdd = Vector2.right * HorizontalInput * speed * Time.deltaTime;
+        OURRigidbody.AddForce(ForceToAdd);
+    }
 }

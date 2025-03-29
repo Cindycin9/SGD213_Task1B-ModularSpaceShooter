@@ -4,26 +4,37 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
-    private Movement movement;
-    private ShootingScript shooting;
+    private PlayerMovementScript playerMovementScript;
+    private ShootingScript shootingScript;
 
     // Start is called before the first frame update
     void Start()
     {
-        movement = GetComponent<Movement>();
-        shooting = GetComponent<ShootingScript>();
+        playerMovementScript = GetComponent<PlayerMovementScript>();
+        shootingScript = GetComponent<ShootingScript>();
     }
 
  
     void Update()
     {
-        float input = Input.GetAxis("Horizontal");
+        float HorizontalInput = Input.GetAxis("Horizontal");
 
-        movement.Move(Vector2.right * input);
+        if(HorizontalInput != 0.0f )
+        {
+            playerMovementScript.HorizontalMovement(HorizontalInput);
+        }
 
         if (Input.GetButton("Fire1"))
         {
-            shooting.Shoot();
+            if (shootingScript != null))
+            {
+                shootingScript.Shoot();
+            }
+            else
+            {
+                Debug.log("Attach the shooting script!");
+            }
         }
+
     }
 }

@@ -133,11 +133,11 @@ GameObject:
   - component: {fileID: 101349199}
   - component: {fileID: 101349198}
   - component: {fileID: 101349197}
-  - component: {fileID: 101349201}
-  - component: {fileID: 101349202}
   - component: {fileID: 101349203}
   - component: {fileID: 101349204}
   - component: {fileID: 101349205}
+  - component: {fileID: 101349207}
+  - component: {fileID: 101349206}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: Player
@@ -239,31 +239,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &101349201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 101349195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f405e83e70d5d2844a31ac5d9abcec96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  acceleration: 90
---- !u!114 &101349202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 101349195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b66173d592150408c25a891f97f778, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &101349203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,6 +312,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagListType: 0
   tags: []
+--- !u!114 &101349206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101349195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1b66173d592150408c25a891f97f778, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &101349207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101349195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a263c48b7905b634caa0ff5c64fc7255, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5000
 --- !u!1 &617788661
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,7 +655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a263c48b7905b634caa0ff5c64fc7255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HorizontalPlayerAcceleration: 5000
+  speed: 5000
 --- !u!50 &1191513930
 Rigidbody2D:
   serializedVersion: 4
