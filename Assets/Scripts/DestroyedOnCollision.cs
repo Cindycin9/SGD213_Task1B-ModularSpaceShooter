@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
+//using UnityEngine.UI;
+
 
 public enum TagListType
 {
     Blacklist,
     Whitelist
 }
-
 
 public class DestroyedOnCollision : MonoBehaviour
 {
@@ -36,7 +36,6 @@ public class DestroyedOnCollision : MonoBehaviour
         {
             // Destroy if it's a Whitelist and the tag is NOT in the Whitelist
             Destroy(gameObject);
-
         }
         else
         {

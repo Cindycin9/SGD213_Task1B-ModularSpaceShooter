@@ -6,9 +6,8 @@ using TMPro;
 
 public class ScoreScript : MonoBehaviour
 { 
-    public int score = 0;
+    public static int score = 0;
     public int maxScore;
-    //    public Text ScoreText;
     public TextMeshProUGUI scoreTxt;
 
     public GameObject Score;
@@ -27,10 +26,7 @@ public class ScoreScript : MonoBehaviour
 
     public void UpdateScore()
     {
-        //        ScoreText.text = "Score 0" + score;
-        //        TextMeshProUGUI.text = "Score 0" + score.ToString();
         scoreTxt.text = "Score:" + score;
- 
     }
 
  
@@ -38,14 +34,12 @@ public class ScoreScript : MonoBehaviour
     {
         UpdateScore();
 
-        if(score ==maxScore)
+        if(score >=2)
         {
             Score.SetActive(false);
             YouText.SetActive(true);
-        }
-        if (score >=6)
-        {
             GameManagerScript.isGameOver = true;
+            Debug.Log("END SCREEN");
         }
     }
    
