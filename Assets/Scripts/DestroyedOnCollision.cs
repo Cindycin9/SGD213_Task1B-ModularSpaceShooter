@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-//using UnityEngine.UI;
 
-
+// TagListType Varaibles 
 public enum TagListType
 {
     Blacklist,
@@ -12,13 +11,14 @@ public enum TagListType
 
 public class DestroyedOnCollision : MonoBehaviour
 {
-
+    // Showing private Variable value on Inspector for the BlackLists
     [SerializeField]
     private TagListType tagListType = TagListType.Blacklist;
 
     // Depending on the tagListType (Blacklist or Whitelist) determines whether to explode or not
     [SerializeField]
     private List<string> tags;
+
 
 
     void OnTriggerEnter2D(Collider2D other)

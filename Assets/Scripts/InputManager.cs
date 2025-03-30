@@ -7,28 +7,18 @@ public class InputManager : MonoBehaviour
     private ShootingScript shootingScript;
     private Movement movement;
 
-    private Transform m_transform;
-
-
 
     void Start()
     {
-
         movement = GetComponent<Movement>();
-
         shootingScript = GetComponent<ShootingScript>();
-
-        m_transform = this.transform;
-
     }
 
+    // If Shooting Script is not assigned and activated with Fire1, Debug.Log will activate
     void Update()
     {
-
         float input = Input.GetAxis("Horizontal");
-
         movement.Move(Vector2.right * input);
-
 
         if (Input.GetButton("Fire1"))
         {
@@ -41,6 +31,5 @@ public class InputManager : MonoBehaviour
                 Debug.Log("Attach the shooting script!");
             }
         }
-
     }
 }

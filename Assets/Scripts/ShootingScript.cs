@@ -1,38 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
-
 
 public class ShootingScript : MonoBehaviour
 {
-
+    // Showing private Variable value on Inspector for GameObject Bullets Offset and Delay
     [SerializeField]
     private GameObject bullet;
-
     private float lastFiredTime = 0f;
 
     [SerializeField]
     private float fireDelay = 1f;
-
     private float bulletOffset = 2f;
-
 
     void Start()
     {
-
-        bulletOffset = GetComponent<Renderer>().bounds.size.y / 2 // Half of our size
-            + bullet.GetComponent<Renderer>().bounds.size.y / 2; // Plus half od the bullet size
-
+        // Calculations that spawn the bullet from the PlayerCharacter -Plus half of the bullet size
+        bulletOffset = GetComponent<Renderer>().bounds.size.y / 2 + bullet.GetComponent<Renderer>().bounds.size.y / 2;
     }
-
-    void Update()
-    {
-
-    }
-
-
-
-    // Delay of Bullets
+    
+    // Bullet delay when shooting
     public void Shoot()
 
     {
@@ -49,8 +35,9 @@ public class ShootingScript : MonoBehaviour
         }
     }
 
-   public float SampleMethod(int number) 
+    public float SampleMethod(int number) 
     {
         return number;
     }
+
 }

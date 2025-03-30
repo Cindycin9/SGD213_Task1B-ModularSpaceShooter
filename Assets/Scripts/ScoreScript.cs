@@ -6,6 +6,7 @@ using TMPro;
 
 public class ScoreScript : MonoBehaviour
 {
+    // Variables for Score system and Score Text
     public static int score = 0;
     public int maxScore;
     public TextMeshProUGUI scoreTxt;
@@ -14,22 +15,29 @@ public class ScoreScript : MonoBehaviour
     public GameObject YouWinText;
 
 
-    void Start()
-    {
-        score = 0;
-    }
 
+    // Score increases to a new score
     public void AddScore(int newScore)
     {
         score += newScore;
     }
 
+
+
+    // Score is 0 when the game has started
+    void Start()
+    {
+        score = 0;
+    }
+
+  
+    // Score text increases 
     public void UpdateScore()
     {
         scoreTxt.text = "Score:" + score;
     }
 
-
+    // If the max score is completed, You win text and Game over screen will activate
     void Update()
     {
         UpdateScore();

@@ -6,9 +6,12 @@ using UnityEngine.SceneManagement;
 public class GameManagerScript : MonoBehaviour
 {
 
+    // Variable for isGameOver and GameOverScreen
     public static bool isGameOver;
     public GameObject gameOverScreen;
 
+
+    // isGameOver is set as inactive unless awakened
     private void Awake()
     {
         isGameOver = false;
@@ -19,6 +22,7 @@ public class GameManagerScript : MonoBehaviour
         
     }
 
+    // If the isGameOver is awakened, the Game Over Screen will activate
     void Update()
     {
         if(isGameOver)

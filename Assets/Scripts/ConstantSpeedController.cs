@@ -4,21 +4,20 @@ using UnityEngine;
 
 public class ConstantSpeedController : MonoBehaviour
 {
-
+    // Showing private Variable value on Inspector for Movement
     [SerializeField]
     private Vector2 direction;
-
     private Movement movement;
 
 
-
-    // Start is called before the first frame update
+    // Movement's movement
     void Start()
     {
         movement = GetComponent<Movement>();
     }
 
-    // Update is called once per frame
+
+    // Movement's direction
     void Update()
     {
         movement.Move(direction);

@@ -251,6 +251,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5661b7be9d2d2254ca8ea0867173f98e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet: {fileID: 180446, guid: d4e8894293f53854287f803dfe62f4f9, type: 3}
+  bulletTransform: {fileID: 207196170}
 --- !u!1 &520221330
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,7 +399,6 @@ GameObject:
   - component: {fileID: 617788665}
   - component: {fileID: 617788663}
   - component: {fileID: 617788662}
-  - component: {fileID: 617788667}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -487,23 +488,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &617788667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 617788661}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b3443206b38ccf4ea657ddfdf5db78f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1049366949}
-  bulletPrefab: {fileID: 0}
-  bulletSpeed: 60
-  bulletStart: {fileID: 0}
-  crosshairs: {fileID: 0}
 --- !u!1 &667852869
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,7 +932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 180446, guid: d4e8894293f53854287f803dfe62f4f9, type: 3}
-  fireDelay: 1
+  fireDelay: 3
 --- !u!61 &1049366956
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1101,6 +1085,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5661b7be9d2d2254ca8ea0867173f98e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet: {fileID: 180446, guid: d4e8894293f53854287f803dfe62f4f9, type: 3}
+  bulletTransform: {fileID: 207196170}
 --- !u!1 &1072261055
 GameObject:
   m_ObjectHideFlags: 0
@@ -1112,7 +1098,6 @@ GameObject:
   - component: {fileID: 1072261057}
   - component: {fileID: 1072261056}
   - component: {fileID: 1072261059}
-  - component: {fileID: 1072261060}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1163,19 +1148,7 @@ MonoBehaviour:
   maxScore: 10
   scoreTxt: {fileID: 667852872}
   Score: {fileID: 667852869}
-  YouWinText: {fileID: 0}
---- !u!114 &1072261060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072261055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b66173d592150408c25a891f97f778, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  YouWinText: {fileID: 520221330}
 --- !u!1 &1126609894
 GameObject:
   m_ObjectHideFlags: 0
@@ -1316,7 +1289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a263c48b7905b634caa0ff5c64fc7255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  f_horPlayAccel: 5000
+  HorizontalPlayerAcceleration: 5000
 --- !u!50 &1191513930
 Rigidbody2D:
   serializedVersion: 4
