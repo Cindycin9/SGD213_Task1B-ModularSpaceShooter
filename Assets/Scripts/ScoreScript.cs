@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 
 public class ScoreScript : MonoBehaviour
-{ 
+{
     public static int score = 0;
     public int maxScore;
     public TextMeshProUGUI scoreTxt;
@@ -29,12 +29,12 @@ public class ScoreScript : MonoBehaviour
         scoreTxt.text = "Score:" + score;
     }
 
- 
-  void Update()
+
+    void Update()
     {
         UpdateScore();
 
-        if(score >=2)
+        if (score >= 2)
         {
             Score.SetActive(false);
             YouText.SetActive(true);

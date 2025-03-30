@@ -16,13 +16,14 @@ public class ShootingScript : MonoBehaviour
 
     void Start()
     {
-        // Calculations that spawn the bullet from the PlayerCharacter -Plus half of the bullet size
-        bulletOffset = GetComponent<Renderer>().bounds.size.y / 2 + bullet.GetComponent<Renderer>().bounds.size.y / 2;
+        // Calculations that spawn the bullet from the PlayerCharacter 
+        bulletOffset = GetComponent<Renderer>().bounds.size.y / 2 // Half of our size
+            + bullet.GetComponent<Renderer>().bounds.size.y / 2; // Plus half od the bullet size
     }
     
     void Update()
     {
-
+      
     }
 
     public void Shoot()
