@@ -10,10 +10,8 @@ public class ScoreScript : MonoBehaviour
     public static int score = 0;
     public int maxScore;
     public TextMeshProUGUI scoreTxt;
-
     public GameObject Score;
     public GameObject YouWinText;
-
 
 
     // Score increases to a new score
@@ -21,7 +19,6 @@ public class ScoreScript : MonoBehaviour
     {
         score += newScore;
     }
-
 
 
     // Score is 0 when the game has started
@@ -37,7 +34,7 @@ public class ScoreScript : MonoBehaviour
         scoreTxt.text = "Score:" + score;
     }
 
-    // If the max score is completed, You win text and Game over screen will activate
+    // If the max score of +5 is completed, You win text and Game over screen will activate
     void Update()
     {
         UpdateScore();

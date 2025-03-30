@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
+    // Variables for ShootingScript and MovementScript
     private ShootingScript shootingScript;
     private Movement movement;
 
-
+    // Reference to the Shooting and Movement Scripts
     void Start()
     {
         movement = GetComponent<Movement>();
