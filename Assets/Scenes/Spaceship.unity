@@ -397,6 +397,7 @@ GameObject:
   - component: {fileID: 617788665}
   - component: {fileID: 617788663}
   - component: {fileID: 617788662}
+  - component: {fileID: 617788667}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -486,6 +487,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &617788667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617788661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b3443206b38ccf4ea657ddfdf5db78f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1049366949}
+  bulletPrefab: {fileID: 0}
+  bulletSpeed: 60
+  bulletStart: {fileID: 0}
+  crosshairs: {fileID: 0}
 --- !u!1 &667852869
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,10 +554,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2080a74963904844e9a8b4c7f802416c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxScore: 0
-  scoreTxt: {fileID: 0}
-  Score: {fileID: 0}
-  YouText: {fileID: 0}
+  maxScore: 5
+  scoreTxt: {fileID: 667852872}
+  Score: {fileID: 520221330}
+  YouWinText: {fileID: 0}
 --- !u!114 &667852872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -829,7 +847,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1048083497}
-  - component: {fileID: 1048083498}
   m_Layer: 0
   m_Name: GameOverScreen
   m_TagString: Untagged
@@ -854,19 +871,6 @@ Transform:
   - {fileID: 1949404941}
   m_Father: {fileID: 1126609898}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1048083498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1048083496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e90653e3f1672184db31de6e91ff017f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameOverScreen: {fileID: 0}
 --- !u!1 &1049366949
 GameObject:
   m_ObjectHideFlags: 0
@@ -1159,7 +1163,7 @@ MonoBehaviour:
   maxScore: 10
   scoreTxt: {fileID: 667852872}
   Score: {fileID: 667852869}
-  YouText: {fileID: 520221330}
+  YouWinText: {fileID: 0}
 --- !u!114 &1072261060
 MonoBehaviour:
   m_ObjectHideFlags: 0

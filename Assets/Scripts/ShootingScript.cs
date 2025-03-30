@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+
 
 public class ShootingScript : MonoBehaviour
 {
@@ -14,18 +16,23 @@ public class ShootingScript : MonoBehaviour
 
     private float bulletOffset = 2f;
 
+
     void Start()
     {
-        // Calculations that spawn the bullet from the PlayerCharacter 
+
         bulletOffset = GetComponent<Renderer>().bounds.size.y / 2 // Half of our size
             + bullet.GetComponent<Renderer>().bounds.size.y / 2; // Plus half od the bullet size
-    }
-    
-    void Update()
-    {
-      
+
     }
 
+    void Update()
+    {
+
+    }
+
+
+
+    // Delay of Bullets
     public void Shoot()
 
     {
@@ -42,9 +49,8 @@ public class ShootingScript : MonoBehaviour
         }
     }
 
-    public float SampleMethod(int number) 
+   public float SampleMethod(int number) 
     {
         return number;
     }
-
 }

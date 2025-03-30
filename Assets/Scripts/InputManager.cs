@@ -7,6 +7,8 @@ public class InputManager : MonoBehaviour
     private ShootingScript shootingScript;
     private Movement movement;
 
+    private Transform m_transform;
+
 
 
     void Start()
@@ -15,6 +17,8 @@ public class InputManager : MonoBehaviour
         movement = GetComponent<Movement>();
 
         shootingScript = GetComponent<ShootingScript>();
+
+        m_transform = this.transform;
 
     }
 

@@ -11,7 +11,7 @@ public class ScoreScript : MonoBehaviour
     public TextMeshProUGUI scoreTxt;
 
     public GameObject Score;
-    public GameObject YouText;
+    public GameObject YouWinText;
 
 
     void Start()
@@ -34,10 +34,10 @@ public class ScoreScript : MonoBehaviour
     {
         UpdateScore();
 
-        if (score >= 2)
+        if (score >= 5)
         {
             Score.SetActive(false);
-            YouText.SetActive(true);
+            YouWinText.SetActive(true);
             GameManagerScript.isGameOver = true;
             Debug.Log("END SCREEN");
         }
